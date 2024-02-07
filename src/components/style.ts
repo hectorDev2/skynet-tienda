@@ -39,11 +39,11 @@ export const Container = styled('div', {
   left: 0,
   backgroundColor: '$black',
   zIndex: 100000,
-  animation: `${ContainerAnimation} 1s ease 7s forwards`,
+  animation: `${ContainerAnimation} 1s ease 2s forwards`,
   svg: {
     maxWidth: '300px',
   },
   '.logo-blizzard': {
-    animation: `${LogoAnimation} 8s ease`,
+    animation: `${LogoAnimation} 2s ease`,
   },
 })
