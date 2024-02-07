@@ -35,8 +35,8 @@ export function Games({ games }: GamesProps) {
     <Container>
       <Header>
         <div className="left">
-          <p className="games-label">GAMES</p>
-          <h2>Jogos Exclusivos</h2>
+          <p className="games-label">Merchandising</p>
+          <h2>Modelos Exclusivos</h2>
         </div>
         <div className="right">
           <div className="platform">
@@ -71,15 +71,20 @@ export function Games({ games }: GamesProps) {
           </div>
           <a href="#">
             <Image src={Cubes} alt="" />
-            Ver todos jogos
+            Ver Todo
           </a>
         </div>
       </Header>
       <GamesList>
-        {games.map((game) => (
+        {games.slice(0, 4).map((game, index: number) => (
           <GameCard key={game.name} data-aos="fade-right">
             <div className="game-image-container">
-              <Image className="game-image" src={game.image} alt="" fill />
+              <Image
+                className="game-image"
+                src={`/polos/${index + 1}.jpeg`}
+                alt=""
+                fill
+              />
               <div className="overlay"></div>
               <Image
                 className="game-logo"
@@ -146,7 +151,7 @@ export function Games({ games }: GamesProps) {
                   fill="#C4C4C4"
                 />
               </svg>
-              Ver todos jogos
+              Ver todos
             </a>
           </div>
         </CardSeeMore>

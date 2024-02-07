@@ -46,9 +46,9 @@ export function Hero() {
       {
         id: 'diablo',
         background: diabloBg.src,
-        heading: 'Retorna à escuridão com o game Diablo IV',
-        text: 'O retorno de Lilith traz uma era de escuridão e sofrimento',
-        buttonText: 'Jogue agora',
+        heading: 'Venta de merchandising',
+        text: 'Polos personalizados, buena calidad y gamers',
+        buttonText: 'Comprar ahora',
         trailer: {
           gif: diabloGif,
           thumbnail: diabloThumb,
@@ -58,8 +58,8 @@ export function Hero() {
       {
         id: 'hearthstone',
         background: hearthstoneBg.src,
-        heading: 'Novo pacote de expansão de Hearthstone',
-        text: 'A Horda e a Aliança se encontraram no Vale Alterac para lutar',
+        heading: 'merchandising de Hearthstone',
+        text: 'Polos, tazas, poleras y mucho mas con la tematica de hearthstone',
         buttonText: 'Reserve agora na pré-venda',
         trailer: {
           gif: hearthstoneGif,
@@ -70,9 +70,9 @@ export function Hero() {
       {
         id: 'wow',
         background: wowBg.src,
-        heading: 'Desbrave as Terras Sombrias em Shadowlands! ',
-        text: 'O que jaz além do mundo que você conhece?',
-        buttonText: 'Reserve na pré-venda',
+        heading: 'Servidor de Wow: SKYNET WOW',
+        text: 'Juega con tus amigos en este loco mundo abierto',
+        buttonText: 'registrar',
         trailer: {
           gif: wowGif,
           thumbnail: wowThumb,

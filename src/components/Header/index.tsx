@@ -1,6 +1,5 @@
 import * as Styled from './styles'
 
-import BlizzardLogo from '@/assets/icons/logo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Nav } from '../Nav'
@@ -71,7 +70,12 @@ export function Header() {
           <Styled.NavContainer>
             <Styled.Logo ref={logoRef}>
               <Link href="/">
-                <Image src={BlizzardLogo} alt="Blizzard" />
+                <Image
+                  width={120}
+                  height={100}
+                  alt="logo skynet"
+                  src="/logo.png"
+                />
               </Link>
             </Styled.Logo>
             <Nav

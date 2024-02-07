@@ -29,7 +29,7 @@ export default function Home({ games }: HomeProps) {
   return (
     <>
       <Head>
-        <title>Home | Blizzard</title>
+        <title>Skynet M</title>
       </Head>
       <main>
         <Loading />
