@@ -39,7 +39,7 @@ export default function Home({ tShirts }: HomeProps) {
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
-    const data: TShirt[] = await tShirts
+    const data = await tShirts
     console.log(data)
 
     return {
