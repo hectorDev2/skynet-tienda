@@ -83,7 +83,7 @@ export const ProgressBar = styled('div', {
 })
 
 export const GameContainers = styled('div', {
-  marginLeft: '52rem',
+  marginLeft: '10rem',
   paddingTop: '20.7rem',
   position: 'relative',
   display: 'flex',
@@ -94,9 +94,6 @@ export const GameContainers = styled('div', {
     gap: '0',
     justifyContent: 'space-between',
     paddingRight: '11.2rem',
-  },
-  '@media(max-width: 1300px)': {
-    marginLeft: '26rem',
   },
   '@md': {
     marginLeft: '2.2rem',

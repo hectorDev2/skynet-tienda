@@ -13,8 +13,8 @@ interface ILinks {
 
 interface NavProps {
   handleExpandMenu: (expanded: boolean) => void
-  handleSelectMenu: (type: 'games' | 'sport' | null) => void
-  selectedMenu: 'games' | 'sport' | null
+  handleSelectMenu: (type: 'games' | 'varios' | null) => void
+  selectedMenu: 'games' | 'varios' | null
   menuExpanded: boolean
 }
 
@@ -23,29 +23,14 @@ const Nav = forwardRef<null, NavProps>(
     const Links: ILinks[] = useMemo(
       () => [
         {
-          label: 'Jogos',
+          label: 'Polos',
           isDropdown: true,
           id: 'games',
         },
         {
-          label: 'Esportes',
+          label: 'Varios',
           isDropdown: true,
-          id: 'sport',
-        },
-        {
-          label: 'Loja',
-          isDropdown: false,
-          href: '/',
-        },
-        {
-          label: 'Notícias',
-          isDropdown: false,
-          href: '/',
-        },
-        {
-          label: 'Suporte',
-          isDropdown: false,
-          href: '/',
+          id: 'varios',
         },
       ],
       []

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import * as Dialog from '@radix-ui/react-dialog'
 import {
   Overlay,
@@ -12,7 +13,6 @@ import {
 import Image from 'next/image'
 import UserIcon from '@/assets/icons/user.svg'
 import CloseIcon from '@/assets/icons/close.svg'
-import Battlenet from '@/assets/icons/battlenet.svg'
 import { Button } from '@/components/Button'
 import { ButtonStyle } from '../Button/style'
 
@@ -27,14 +27,14 @@ export function LoginModal() {
             })}
           >
             <Image src={UserIcon} alt="Criar conta" width={19} height={19} />
-            Logar
+            ingresar
           </button>
         </Dialog.Trigger>
         <Dialog.Portal>
           <Overlay>
             <Content>
               <header>
-                <Image src={Battlenet} alt="Battlenet" />
+                <img className="w-[100px]" src={'/logo.png'} alt="Battlenet" />
               </header>
               <Form>
                 <InputWrapper>

@@ -16,7 +16,6 @@ import wowGif from '@/assets/banners_hero/wow-animation.gif'
 import wowLogo from '@/assets/banners_hero/wow-logo.png'
 
 import UserIcon from '@/assets/icons/user.svg'
-import PlayIcon from '@/assets/icons/play.svg'
 
 import { useEffect, useMemo, useState } from 'react'
 import { Slider } from '@/components/Slider'
@@ -153,39 +152,6 @@ export function Hero() {
                 {game.buttonText}
               </Button>
             </Styled.LeftSide>
-            <Styled.RightSide>
-              <Image
-                src={game.logo.src}
-                width={game.logo.width}
-                height={game.logo.height}
-                alt=""
-                className="logo"
-              />
-
-              <Styled.GameTrailerWrapper>
-                <p>Assita o trailer</p>
-                <Styled.GameTrailer>
-                  <Image
-                    src={game.trailer.thumbnail.src}
-                    width={game.trailer.thumbnail.width}
-                    height={game.trailer.thumbnail.height}
-                    alt=""
-                    className="thumbnail"
-                  />
-                  <Image
-                    src={game.trailer.gif.src}
-                    width={game.trailer.gif.width}
-                    height={game.trailer.gif.height}
-                    alt=""
-                    className="gif"
-                  />
-
-                  <button aria-label="Assistir trailer">
-                    <Image src={PlayIcon} alt="" />
-                  </button>
-                </Styled.GameTrailer>
-              </Styled.GameTrailerWrapper>
-            </Styled.RightSide>
           </Styled.GameContainers>
         </Styled.GameContent>
       ))}

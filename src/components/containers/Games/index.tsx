@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { IGames } from 'src/pages'
 import { CardSeeMore, Container, GameCard, GamesList, Header } from './style'
 
 import Cubes from '@/assets/icons/cubes.svg'
@@ -8,9 +7,11 @@ import Playstation from '@/assets/icons/playstation.svg'
 import Nitendo from '@/assets/icons/nitendo.svg'
 import Xbox from '@/assets/icons/xbox.svg'
 import { useState } from 'react'
+import { TShirt } from 'src/types'
+import Link from 'next/link'
 
 interface GamesProps {
-  games: IGames[]
+  tShirts: TShirt[]
 }
 
 enum Platform {
@@ -20,9 +21,8 @@ enum Platform {
   'XBOX' = 'XBOX',
 }
 
-export function Games({ games }: GamesProps) {
+export function Games({ tShirts }: GamesProps) {
   const [filter, setFilter] = useState<Platform | null>(null)
-
   const selectFilter = (selectedFilter: Platform) => {
     if (selectedFilter != filter) {
       setFilter(selectedFilter)
@@ -76,27 +76,29 @@ export function Games({ games }: GamesProps) {
         </div>
       </Header>
       <GamesList>
-        {games.slice(0, 4).map((game, index: number) => (
-          <GameCard key={game.name} data-aos="fade-right">
-            <div className="game-image-container">
-              <Image
-                className="game-image"
-                src={`/polos/${index + 1}.jpeg`}
-                alt=""
-                fill
-              />
-              <div className="overlay"></div>
-              <Image
+        {tShirts?.slice(0, 4).map((tShirt, index: number) => (
+          <Link key={tShirt.name} href={`/productos/${tShirt.id}`}>
+            <GameCard data-aos="fade-right">
+              <div className="game-image-container">
+                <Image
+                  className="w-[400px]"
+                  src={`/polos/${index + 1}.jpeg`}
+                  alt=""
+                  fill
+                />
+                <div className="overlay"></div>
+                {/* <Image
                 className="game-logo"
-                src={game.logo}
+                src={tShirt.logo}
                 alt=""
                 width={160}
                 height={105}
-              />
-            </div>
-            <p className="game-name">{game.name}</p>
-            <p className="game-category">{game.category}</p>
-          </GameCard>
+              /> */}
+              </div>
+              <p className="game-name">{tShirt.name}</p>
+              <p className="game-category">{tShirt.category}</p>
+            </GameCard>
+          </Link>
         ))}
         <CardSeeMore data-aos="fade-right">
           <div>

@@ -3,7 +3,6 @@ import * as Styled from './styles'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Nav } from '../Nav'
-import { Button } from '../Button'
 import { Menu } from '../Menu'
 
 import { useEffect, useRef, useState } from 'react'
@@ -16,7 +15,7 @@ export function Header() {
   const buttonsRef = useRef(null)
 
   const [isExpanded, setIsExpanded] = useState(false)
-  const [selectedMenu, setSelectedMenu] = useState<'games' | 'sport' | null>(
+  const [selectedMenu, setSelectedMenu] = useState<'games' | 'varios' | null>(
     null
   )
 
@@ -36,7 +35,7 @@ export function Header() {
       {
         x: 0,
         opacity: 1,
-        delay: 8.3,
+        delay: 3,
       }
     )
       .fromTo(
@@ -78,6 +77,7 @@ export function Header() {
                 />
               </Link>
             </Styled.Logo>
+
             <Nav
               handleExpandMenu={setIsExpanded}
               handleSelectMenu={setSelectedMenu}
@@ -87,7 +87,6 @@ export function Header() {
             />
           </Styled.NavContainer>
           <Styled.ButtonsWrap ref={buttonsRef}>
-            <Button variant="outlined">Criar Conta</Button>
             <LoginModal />
             <Styled.MenuHamburguer aria-label="Abrir menu">
               <div className="menu-hamburguer"></div>

@@ -1,22 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 import * as Styled from './styles'
 
-import arcade from '@/assets/game_icons/arcade.png'
 import diablo_3 from '@/assets/game_icons/diablo_3.png'
-import diablo_immortal from '@/assets/game_icons/diablo_immortal.png'
-import diablo_iv from '@/assets/game_icons/diablo_iv.png'
 import hearthstone from '@/assets/game_icons/hearthstone.png'
-import heroes from '@/assets/game_icons/heroes_of_the_storm.png'
-import warcraft from '@/assets/game_icons/warcraft.png'
 import overwatch_2 from '@/assets/game_icons/overwatch_2.png'
-import starcraft_2 from '@/assets/game_icons/starcraft_2.png'
-import starcraft from '@/assets/game_icons/starcraft.png'
 import wow from '@/assets/game_icons/wow.png'
 
-import hearthstoneMasters from '@/assets/game_logos/hearthstone_masters.png'
-import wowChampionship from '@/assets/game_logos/wow_championship.png'
 import starcraftWcs from '@/assets/game_logos/star_craft.png'
-import overwatchWorld from '@/assets/game_logos/overwatch_world.png'
-import overwatchLeague from '@/assets/game_logos/overwatch_league.png'
 
 import cubes from '@/assets/icons/cubes.svg'
 import iconLogo from '@/assets/icons/icon-logo.svg'
@@ -36,7 +26,7 @@ interface IGames {
 
 interface MenuProps {
   show: boolean
-  selectedMenu: 'games' | 'sport' | null
+  selectedMenu: 'games' | 'varios' | null
 }
 
 export function Menu({ show, selectedMenu }: MenuProps) {
@@ -44,7 +34,7 @@ export function Menu({ show, selectedMenu }: MenuProps) {
     () => [
       {
         image: <Image src={diablo_3} alt="" />,
-        href: '#',
+        href: '/category/anime',
         name: 'Diablo® II ressurected',
       },
       {
@@ -62,76 +52,41 @@ export function Menu({ show, selectedMenu }: MenuProps) {
         href: '#',
         name: 'Hearthstone®',
       },
-      {
-        image: <Image src={heroes} alt="" />,
-        href: '#',
-        name: 'Heroes of the storm®',
-      },
-      {
-        image: <Image src={warcraft} alt="" />,
-        href: '#',
-        name: 'Warcraft® III Reforged',
-      },
-      {
-        image: <Image src={diablo_iv} alt="" />,
-        href: '#',
-        name: 'Diablo® IV',
-      },
-      {
-        image: <Image src={diablo_immortal} alt="" />,
-        href: '#',
-        name: 'Diablo® Immortal',
-      },
-      {
-        image: <Image src={diablo_3} alt="" />,
-        href: '#',
-        name: 'Diablo® III',
-      },
-      {
-        image: <Image src={starcraft_2} alt="" />,
-        href: '#',
-        name: 'StarCraft® II',
-      },
-      {
-        image: <Image src={starcraft} alt="" />,
-        href: '#',
-        name: 'StarCraft® Remastered',
-      },
-      {
-        image: <Image src={arcade} alt="" />,
-        href: '#',
-        name: 'Arcade da Blizzard®',
-      },
     ],
     []
   )
 
-  const sports = useMemo<IGames[]>(
+  const varios = useMemo<IGames[]>(
     () => [
       {
-        name: 'Hearthstone® masters',
+        name: 'Mugs',
         href: '#',
-        image: <Image src={hearthstoneMasters} alt="" />,
+        image: (
+          <img
+            src={`https://www.nespresso.com/static/us/solutions/product/pdp/porcelainmugs/nesp-festive-le-mug-set-2000x2000.png`}
+            alt=""
+          />
+        ),
       },
       {
-        name: 'Campeonato Mundial de Arena WoW®',
+        name: 'Escultura',
         href: '#',
-        image: <Image src={wowChampionship} alt="" />,
+        image: (
+          <img
+            src={`https://alitools.io/es/showcase/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FH0b5939bc62974af29101b4aef8392ec5y.png_480x480.jpg`}
+            alt=""
+          />
+        ),
       },
       {
-        name: 'StarCraft® II WCS',
+        name: 'Posters',
         href: '#',
-        image: <Image src={starcraftWcs} alt="" />,
-      },
-      {
-        name: 'Copa Mundial de Overwatch®',
-        href: '#',
-        image: <Image src={overwatchWorld} alt="" />,
-      },
-      {
-        name: 'Liga de Overwatch®',
-        href: '#',
-        image: <Image src={overwatchLeague} alt="" />,
+        image: (
+          <img
+            src={`https://www.chitrakalaart.in/wp-content/uploads/2023/08/Group-4.png`}
+            alt=""
+          />
+        ),
       },
     ],
     []
@@ -145,17 +100,19 @@ export function Menu({ show, selectedMenu }: MenuProps) {
             <>
               {games.map((game) => (
                 <Fragment key={game.name}>
-                  <Styled.Game>
-                    {game.image}
-                    <p>{game.name}</p>
-                  </Styled.Game>
+                  <a href={`${game.href}`}>
+                    <Styled.Game>
+                      {game.image}
+                      <p>{game.name}</p>
+                    </Styled.Game>
+                  </a>
                 </Fragment>
               ))}
             </>
           )}
-          {selectedMenu === 'sport' && (
+          {selectedMenu === 'varios' && (
             <>
-              {sports.map((game) => (
+              {varios.map((game) => (
                 <span key={game.name}>
                   <Styled.Game>
                     {game.image}
@@ -183,7 +140,7 @@ export function Menu({ show, selectedMenu }: MenuProps) {
               </Link>
             </>
           )}
-          {selectedMenu === 'sport' && (
+          {selectedMenu === 'varios' && (
             <Link href={'#'}>
               <Image src={trophy} alt="" /> Torneios da comunidade
             </Link>

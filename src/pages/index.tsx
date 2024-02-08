@@ -9,19 +9,13 @@ import AOS from 'aos'
 import { useEffect } from 'react'
 
 import 'aos/dist/aos.css'
-
-export interface IGames {
-  name: string
-  category: string
-  image: string
-  logo: string
-}
+import { TShirt } from 'src/types'
 
 interface HomeProps {
-  games: IGames[]
+  tShirts: TShirt[]
 }
 
-export default function Home({ games }: HomeProps) {
+export default function Home({ tShirts }: HomeProps) {
   useEffect(() => {
     AOS.init()
     AOS.refresh()
@@ -35,7 +29,7 @@ export default function Home({ games }: HomeProps) {
         <Loading />
         <Header />
         <Hero />
-        <Games games={games} />
+        <Games tShirts={tShirts} />
         <Download />
       </main>
     </>
@@ -44,20 +38,19 @@ export default function Home({ games }: HomeProps) {
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
-    const response = await fetch(
-      'https://api.brchallenges.com/api/blizzard/games'
-    )
-    const data: IGames[] = await response.json()
+    const response = await fetch('http://localhost:3000/t-shirts')
+    const data: TShirt[] = await response.json()
+    console.log(data)
 
     return {
       props: {
-        games: data,
+        tShirts: data,
       },
     }
   } catch (error) {
     return {
       props: {
-        games: [],
+        tShirts: [],
       },
     }
   }
