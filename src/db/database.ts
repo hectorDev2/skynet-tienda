@@ -2,7 +2,7 @@ export const tShirts = [
   {
     id: '1',
     name: 'Polo Gaming Supreme',
-    category: 100,
+    category: 'anime',
     price: 25,
     colors: [
       { id: 1, name: 'black' },
@@ -12,9 +12,10 @@ export const tShirts = [
     description:
       'The ultimate gaming polo for true gamers. Made with premium materials for maximum comfort during those long gaming sessions.',
     image: [
-      { id: 1, url: 'https://example.com/image1.jpg' },
-      { id: 2, url: 'https://example.com/image2.jpg' },
-      { id: 3, url: 'https://example.com/image3.jpg' },
+      '/polos.anime/1.webp',
+      '/polos.anime/2.webp',
+      '/polos.anime/3.jpg',
+      '/polos.anime/4.jpg',
     ],
   },
   {
@@ -29,11 +30,7 @@ export const tShirts = [
     ],
     description:
       'A polo for the first player. Show off your gaming skills with style.',
-    image: [
-      { id: 1, url: 'https://example.com/image4.jpg' },
-      { id: 2, url: 'https://example.com/image5.jpg' },
-      { id: 3, url: 'https://example.com/image6.jpg' },
-    ],
+    image: [],
   },
   {
     id: '3',
@@ -145,6 +142,6 @@ export const tShirts = [
   },
 ]
 
-export const getTshirtId = (id: any) => {
+export const getTshirtId = (id: string | string[] | undefined) => {
   return tShirts.find((t) => t.id === id)
 }

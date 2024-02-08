@@ -54,7 +54,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export async function getStaticPaths() {
-  const data: TShirt[] = await tShirts
+  const data = await tShirts
 
   // Mapea los datos de los productos para obtener un array de objetos con los IDs de los productos
   const productIds = data.map((product) => ({
