@@ -5,6 +5,7 @@ import Head from 'next/head'
 import { GetStaticProps } from 'next'
 import { TShirt } from 'src/types'
 import { Content } from '@/components/productId/Content'
+import { getTshirtId, tShirts } from 'src/db/database'
 interface HomeProps {
   tShirt: TShirt
 }
@@ -36,8 +37,7 @@ export default function Home({ tShirt }: HomeProps) {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const productId = params?.id
   try {
-    const response = await fetch(`http://localhost:3000/t-shirts/${productId}`)
-    const data: TShirt = await response.json()
+    const data = await getTshirtId(productId)
 
     return {
       props: {
@@ -54,8 +54,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export async function getStaticPaths() {
-  const response = await fetch('http://localhost:3000/t-shirts')
-  const data: TShirt[] = await response.json()
+  const data: TShirt[] = await tShirts
 
   // Mapea los datos de los productos para obtener un array de objetos con los IDs de los productos
   const productIds = data.map((product) => ({

@@ -120,7 +120,7 @@ export const GameCard = styled('div', {
   cursor: 'pointer',
   '.game-image-container': {
     position: 'relative',
-    height: '40rem',
+    height: '20rem',
     overflow: 'hidden',
     borderRadius: '.3rem',
   },

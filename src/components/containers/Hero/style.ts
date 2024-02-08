@@ -84,13 +84,13 @@ export const ProgressBar = styled('div', {
 
 export const GameContainers = styled('div', {
   marginLeft: '10rem',
-  paddingTop: '20.7rem',
+  paddingTop: '15.7rem',
   position: 'relative',
   display: 'flex',
   justifyContent: 'space-between',
   maxWidth: '108.2rem',
   '@xl': {
-    marginLeft: '32rem',
+    marginLeft: '22rem',
     gap: '0',
     justifyContent: 'space-between',
     paddingRight: '11.2rem',

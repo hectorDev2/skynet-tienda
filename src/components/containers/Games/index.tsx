@@ -87,13 +87,6 @@ export function Games({ tShirts }: GamesProps) {
                   fill
                 />
                 <div className="overlay"></div>
-                {/* <Image
-                className="game-logo"
-                src={tShirt.logo}
-                alt=""
-                width={160}
-                height={105}
-              /> */}
               </div>
               <p className="game-name">{tShirt.name}</p>
               <p className="game-category">{tShirt.category}</p>

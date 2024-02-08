@@ -6,8 +6,6 @@ import hearthstone from '@/assets/game_icons/hearthstone.png'
 import overwatch_2 from '@/assets/game_icons/overwatch_2.png'
 import wow from '@/assets/game_icons/wow.png'
 
-import starcraftWcs from '@/assets/game_logos/star_craft.png'
-
 import cubes from '@/assets/icons/cubes.svg'
 import iconLogo from '@/assets/icons/icon-logo.svg'
 import iconDownload from '@/assets/icons/icon-downloads.svg'

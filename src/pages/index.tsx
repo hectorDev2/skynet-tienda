@@ -10,6 +10,7 @@ import { useEffect } from 'react'
 
 import 'aos/dist/aos.css'
 import { TShirt } from 'src/types'
+import { tShirts } from 'src/db/database'
 
 interface HomeProps {
   tShirts: TShirt[]
@@ -38,8 +39,7 @@ export default function Home({ tShirts }: HomeProps) {
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
-    const response = await fetch('http://localhost:3000/t-shirts')
-    const data: TShirt[] = await response.json()
+    const data: TShirt[] = await tShirts
     console.log(data)
 
     return {
