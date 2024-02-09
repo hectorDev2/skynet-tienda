@@ -1,7 +1,7 @@
 export const tShirts = [
   {
     id: '1',
-    name: 'Polo Gaming Supreme',
+    name: 'Polos Anime',
     category: 'anime',
     price: 25,
     colors: [
@@ -10,17 +10,17 @@ export const tShirts = [
       { id: 3, name: 'red' },
     ],
     description:
-      'The ultimate gaming polo for true gamers. Made with premium materials for maximum comfort during those long gaming sessions.',
+      'Sumérgete en el fascinante mundo del anime con nuestra colección de polos inspirados en tus series y personajes favoritos. Desde clásicos atemporales hasta los últimos éxitos de la animación japonesa, encontrarás diseños únicos que reflejan tu pasión por el anime.',
     image: [
-      '/polos.anime/1.webp',
-      '/polos.anime/2.webp',
-      '/polos.anime/3.jpg',
-      '/polos.anime/4.jpg',
+      '/polos/anime/1.webp',
+      '/polos/anime/2.webp',
+      '/polos/anime/3.jpg',
+      '/polos/anime/4.jpg',
     ],
   },
   {
     id: '2',
-    name: 'Player 1 Polo',
+    name: 'Counter Strike',
     category: 100,
     price: 20,
     colors: [
@@ -29,13 +29,17 @@ export const tShirts = [
       { id: 3, name: 'red' },
     ],
     description:
-      'A polo for the first player. Show off your gaming skills with style.',
-    image: [],
+      'Únete a la acción trepidante y la estrategia táctica con nuestra colección de polos inspirados en el legendario juego Counter-Strike. Desde la emblemática insignia del Counter-Terrorist hasta el icónico logo del Terrorist, nuestros diseños capturan la esencia de este juego de disparos en primera persona que ha cautivado a millones de jugadores en todo el mundo.',
+    image: [
+      '/polos/counter/1.jpg',
+      '/polos/counter/2.jfif',
+      '/polos/counter/3.jpg',
+    ],
   },
   {
     id: '3',
-    name: 'Retro Gamer Polo',
-    category: 100,
+    name: 'Polos Doteros',
+    category: 'dota',
     price: 18,
     colors: [
       { id: 1, name: 'green' },
@@ -43,16 +47,17 @@ export const tShirts = [
       { id: 3, name: 'black' },
     ],
     description:
-      'Take a trip down memory lane with this retro-themed gaming polo.',
+      'Sumérgete en el emocionante mundo de Dota con nuestra colección de polos inspirados en este popular juego de estrategia en tiempo real. Desde los héroes más icónicos hasta los diseños emblemáticos del mapa, nuestros polos capturan la esencia del combate épico y la competencia estratégica que define a Dota',
     image: [
-      { id: 1, url: 'https://example.com/image7.jpg' },
-      { id: 2, url: 'https://example.com/image8.jpg' },
-      { id: 3, url: 'https://example.com/image9.jpg' },
+      '/polos/dota2/1.webp',
+      '/polos/dota2/2.webp',
+      '/polos/dota2/3.webp',
+      '/polos/dota2/4.webp',
     ],
   },
   {
     id: '4',
-    name: "Gamer's Choice Polo",
+    name: 'God Of War',
     category: 100,
     price: 30,
     colors: [
@@ -61,16 +66,18 @@ export const tShirts = [
       { id: 3, name: 'blue' },
     ],
     description:
-      'The preferred choice of professional gamers. Elevate your gaming wardrobe.',
+      'Embárcate en una aventura épica inspirada en la mitología griega con nuestra colección de polos de God of War. Con diseños que rinden homenaje al valiente guerrero espartano, Kratos, y a las criaturas míticas que pueblan su mundo, nuestros polos capturan la intensidad y la grandeza de esta aclamada serie de videojuegos. ',
     image: [
-      { id: 1, url: 'https://example.com/image10.jpg' },
-      { id: 2, url: 'https://example.com/image11.jpg' },
-      { id: 3, url: 'https://example.com/image12.jpg' },
+      '/polos/gow/1.jpg',
+      '/polos/gow/2.webp',
+      '/polos/gow/3.webp',
+      '/polos/gow/4.jpg',
+      '/polos/gow/5.webp',
     ],
   },
   {
     id: '5',
-    name: 'Elite Gamer Polo',
+    name: 'Half life',
     category: 100,
     price: 35,
     colors: [
@@ -79,16 +86,12 @@ export const tShirts = [
       { id: 3, name: 'white' },
     ],
     description:
-      'For the elite gamers who demand nothing but the best. Level up your style.',
-    image: [
-      { id: 1, url: 'https://example.com/image13.jpg' },
-      { id: 2, url: 'https://example.com/image14.jpg' },
-      { id: 3, url: 'https://example.com/image15.jpg' },
-    ],
+      ' Sumérgete en el mundo innovador y lleno de suspense de Half-Life con nuestra colección de polos inspirados en esta icónica serie de videojuegos. Desde el emblemático logotipo hasta diseños que rinden homenaje a personajes como Gordon Freeman y criaturas como los headcrabs, nuestros polos capturan la esencia de la revolucionaria franquicia de Valve.',
+    image: ['/polos/half_life/1.webp', '/polos/half_life/2.webp'],
   },
   {
     id: '6',
-    name: 'Legendary Gamer Polo',
+    name: 'Metal Slug',
     category: 100,
     price: 40,
     colors: [
@@ -97,16 +100,12 @@ export const tShirts = [
       { id: 3, name: 'gold' },
     ],
     description:
-      'For the legends of gaming. Make a statement with this legendary polo.',
-    image: [
-      { id: 1, url: 'https://example.com/image16.jpg' },
-      { id: 2, url: 'https://example.com/image17.jpg' },
-      { id: 3, url: 'https://example.com/image18.jpg' },
-    ],
+      ' Únete a la batalla contra el malvado General Morden y su ejército rebelde con nuestra colección de polos inspirados en la clásica serie de videojuegos Metal Slug. Con diseños que capturan la acción explosiva, los icónicos vehículos y los valientes héroes de la Resistencia, nuestros polos son el complemento perfecto para los fanáticos de la intensa acción arcade.',
+    image: ['/polos/metal_slug/1.jpg'],
   },
   {
     id: '7',
-    name: 'Pixel Polo',
+    name: 'Star Craft',
     category: 100,
     price: 22,
     colors: [
@@ -115,16 +114,16 @@ export const tShirts = [
       { id: 3, name: 'red' },
     ],
     description:
-      'Embrace the pixelated world with this stylish polo. Perfect for retro gamers.',
+      'Demuestra tu lealtad a la legendaria saga de videojuegos con nuestra selección de polos inspirados en el universo de StarCraft. Ya sea que te alinees con los terran, zerg o protoss, nuestros diseños te permitirán llevar tu amor por el juego a otro nivel.',
     image: [
-      { id: 1, url: 'https://example.com/image19.jpg' },
-      { id: 2, url: 'https://example.com/image20.jpg' },
-      { id: 3, url: 'https://example.com/image21.jpg' },
+      '/polos/starcraft/1.webp',
+      '/polos/starcraft/2.webp',
+      '/polos/starcraft/3.webp',
     ],
   },
   {
     id: '8',
-    name: 'Game On Polo',
+    name: 'Nintendo',
     category: 100,
     price: 28,
     colors: [
@@ -133,11 +132,11 @@ export const tShirts = [
       { id: 3, name: 'green' },
     ],
     description:
-      'Get ready to play with this dynamic gaming polo. The game is on!',
+      ': Revive la nostalgia y la emoción de tus juegos favoritos de Nintendo con nuestra línea de polos dedicada a esta icónica compañía de videojuegos. Desde Mario y Zelda hasta Pokémon y Splatoon, nuestra colección ofrece una amplia gama de opciones para los fans de todas las edades.',
     image: [
-      { id: 1, url: 'https://example.com/image22.jpg' },
-      { id: 2, url: 'https://example.com/image23.jpg' },
-      { id: 3, url: 'https://example.com/image24.jpg' },
+      '/polos/nintendo/1.webp',
+      '/polos/nintendo/2.jpg',
+      '/polos/nintendo/3.jpg',
     ],
   },
 ]

@@ -13,7 +13,7 @@ export const Content = ({ tShirt }: { tShirt: TShirt }) => {
       <section className="section-center product-section text-white">
         <section className="product-component">
           {/* <!-- image gallery --> */}
-          <ProductGallery />
+          <ProductGallery images={tShirt.image} />
           {/* <!--product description --> */}
           <ProductInfo info={tShirt} />
         </section>

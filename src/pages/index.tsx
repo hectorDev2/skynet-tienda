@@ -40,7 +40,7 @@ export default function Home({ tShirts }: HomeProps) {
 export const getStaticProps: GetStaticProps = async () => {
   try {
     const data = await tShirts
-    console.log(data)
+    console.log(data, 'polos')
 
     return {
       props: {

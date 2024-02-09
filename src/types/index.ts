@@ -5,15 +5,10 @@ export interface TShirt {
   price: number
   colors: Color[]
   description: string
-  image: Image[]
+  image: string[]
 }
 
 export interface Color {
   id: number
   name: string
-}
-
-export interface Image {
-  id: number
-  url: string
 }

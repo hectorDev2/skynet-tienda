@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
 import { CardSeeMore, Container, GameCard, GamesList, Header } from './style'
 
@@ -76,16 +77,11 @@ export function Games({ tShirts }: GamesProps) {
         </div>
       </Header>
       <GamesList>
-        {tShirts?.slice(0, 4).map((tShirt, index: number) => (
+        {tShirts?.map((tShirt) => (
           <Link key={tShirt.name} href={`/productos/${tShirt.id}`}>
             <GameCard data-aos="fade-right">
               <div className="game-image-container">
-                <Image
-                  className="w-[400px]"
-                  src={`/polos/${index + 1}.jpeg`}
-                  alt=""
-                  fill
-                />
+                <img className="w-[400px]" src={`${tShirt.image[0]}`} alt="" />
                 <div className="overlay"></div>
               </div>
               <p className="game-name">{tShirt.name}</p>

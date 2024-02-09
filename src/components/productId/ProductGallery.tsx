@@ -1,14 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react'
 
-export const ProductGallery = ({
-  images = [
-    '/polos/anime/1.webp',
-    '/polos/anime/2.webp',
-    '/polos/anime/3.jpg',
-    '/polos/anime/4.jpg',
-  ],
-}) => {
+export const ProductGallery = ({ images }: { images: string[] }) => {
   const [imagePrincipal, setImagePrincipal] = useState(images[0])
   console.log(images, 'images')
 

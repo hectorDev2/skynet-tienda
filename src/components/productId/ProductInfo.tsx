@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import { TShirt } from 'src/types'
 
 export const ProductInfo = ({ info }: { info: TShirt }) => {
+  console.log(info, 'info')
+
   const [count, setCount] = useState(0)
   return (
     <article className="product-description text-white">
@@ -11,9 +13,9 @@ export const ProductInfo = ({ info }: { info: TShirt }) => {
       <p className="description">{info.description}</p>
       <div className="product-offer">
         <p className="price">
-          $125.00 <span className="promotion"> 50% </span>
+          s./ {info.price}.00 <span className="promotion"> 50% </span>
         </p>
-        <p className="crossed-out-price">$250.00</p>
+        <p className="crossed-out-price">$100.00</p>
       </div>
       {/* <!-- call to action--> */}
       <div className="call-to-action">
@@ -37,7 +39,7 @@ export const ProductInfo = ({ info }: { info: TShirt }) => {
               fille-rule="nonzero"
             />
           </svg>
-          add to cart
+          agregar al carrito
         </button>
       </div>
     </article>
