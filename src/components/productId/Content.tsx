@@ -2,8 +2,9 @@
 import React from 'react'
 import { ProductGallery } from './ProductGallery'
 import { ProductInfo } from './ProductInfo'
+import { TShirt } from 'src/types'
 
-export const Content = ({ tShirt }) => {
+export const Content = ({ tShirt }: { tShirt: TShirt }) => {
   console.log(tShirt)
 
   return (

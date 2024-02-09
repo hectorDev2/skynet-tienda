@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react'
+import { TShirt } from 'src/types'
 
-export const ProductInfo = ({ info }) => {
-  console.log(info)
-
+export const ProductInfo = ({ info }: { info: TShirt }) => {
   const [count, setCount] = useState(0)
   return (
     <article className="product-description text-white">

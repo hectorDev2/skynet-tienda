@@ -36,7 +36,7 @@ export const ProductGallery = ({
           <figcaption
             key={image}
             className={`thumbnails-image ${
-              image == imagePrincipal && 'border border-green-700'
+              image == imagePrincipal && 'border-4  border-cyan-800'
             }`}
             onClick={() => setImagePrincipal(image)}
           >
