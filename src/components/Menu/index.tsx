@@ -1,11 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import * as Styled from './styles'
 
-import diablo_3 from '@/assets/game_icons/diablo_3.png'
-import hearthstone from '@/assets/game_icons/hearthstone.png'
-import overwatch_2 from '@/assets/game_icons/overwatch_2.png'
-import wow from '@/assets/game_icons/wow.png'
-
 import cubes from '@/assets/icons/cubes.svg'
 import iconLogo from '@/assets/icons/icon-logo.svg'
 import iconDownload from '@/assets/icons/icon-downloads.svg'
@@ -31,24 +26,24 @@ export function Menu({ show, selectedMenu }: MenuProps) {
   const games = useMemo<IGames[]>(
     () => [
       {
-        image: <Image src={diablo_3} alt="" />,
+        image: (
+          <img
+            src={`https://p325k7wa.twic.pics/high/one-piece/one-piece-odyssey/00-page-setup/OPOD_character_gallery/OPOD_luffy.png?twic=v1/resize=370/step=10/quality=80`}
+            alt="categoria anime image"
+          />
+        ),
         href: '/category/anime',
-        name: 'Diablo® II ressurected',
+        name: 'Polos anime',
       },
       {
-        image: <Image src={overwatch_2} alt="" />,
-        href: '#',
-        name: 'Overwatch® 2',
-      },
-      {
-        image: <Image src={wow} alt="" />,
-        href: '#',
-        name: 'World of Warcraft®',
-      },
-      {
-        image: <Image src={hearthstone} alt="" />,
-        href: '#',
-        name: 'Hearthstone®',
+        image: (
+          <img
+            src={`https://p325k7wa.twic.pics/high/one-piece/one-piece-odyssey/00-page-setup/OPOD_character_gallery/OPOD_luffy.png?twic=v1/resize=370/step=10/quality=80`}
+            alt="categoria anime image"
+          />
+        ),
+        href: '/category/anime',
+        name: 'Polos anime',
       },
     ],
     []
@@ -71,7 +66,7 @@ export function Menu({ show, selectedMenu }: MenuProps) {
         href: '#',
         image: (
           <img
-            src={`https://alitools.io/es/showcase/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FH0b5939bc62974af29101b4aef8392ec5y.png_480x480.jpg`}
+            src={`https://www.figurasmranime.cl/wp-content/uploads/2022/05/Fashion-anime-japanese-Naruto-action-figure.png_350x350-copia.png`}
             alt=""
           />
         ),

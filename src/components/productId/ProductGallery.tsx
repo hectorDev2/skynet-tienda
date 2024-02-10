@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 
 export const ProductGallery = ({ images }: { images: string[] }) => {
   const [imagePrincipal, setImagePrincipal] = useState(images[0])
-  console.log(images, 'images')
 
   return (
     <div className="images-gallery">

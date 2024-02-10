@@ -12,6 +12,7 @@
     "backend": "npx json-server src/db/backend.json"
   },
   "dependencies": {
+    "@fontsource-variable/onest": "^5.0.2",
     "@radix-ui/react-dialog": "^1.0.2",
     "@stitches/react": "^1.2.8",
     "@types/node": "18.11.9",
