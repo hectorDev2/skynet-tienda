@@ -1,5 +1,5 @@
 import { Download } from '@/components/containers/Download'
-import { Games } from '@/components/containers/Games'
+import { Products } from '@/components/containers/Products'
 import { Hero } from '@/components/containers/Hero'
 import { Loading } from '@/components/containers/Loading'
 import { Header } from '@/components/Header'
@@ -11,6 +11,7 @@ import { useEffect } from 'react'
 import 'aos/dist/aos.css'
 import { TShirt } from 'src/types'
 import { tShirts } from 'src/db/database'
+import RootLayout from 'src/layout/layout'
 
 interface HomeProps {
   tShirts: TShirt[]
@@ -22,7 +23,7 @@ export default function Home({ tShirts }: HomeProps) {
     AOS.refresh()
   }, [])
   return (
-    <>
+    <RootLayout>
       <Head>
         <title>Skynet M</title>
       </Head>
@@ -30,10 +31,10 @@ export default function Home({ tShirts }: HomeProps) {
         <Loading />
         <Header />
         <Hero />
-        <Games tShirts={tShirts} />
+        <Products tShirts={tShirts} />
         <Download />
       </main>
-    </>
+    </RootLayout>
   )
 }
 

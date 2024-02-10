@@ -77,8 +77,8 @@ export const tShirts = [
   },
   {
     id: '5',
-    name: 'Half_life',
-    category: 100,
+    name: 'Half life',
+    category: 'Half_life',
     price: 35,
     colors: [
       { id: 1, name: 'black' },
@@ -91,8 +91,8 @@ export const tShirts = [
   },
   {
     id: '6',
-    name: 'metal_slug',
-    category: 100,
+    name: 'metal slug',
+    category: 'metal_slug',
     price: 40,
     colors: [
       { id: 1, name: 'red' },
@@ -143,4 +143,9 @@ export const tShirts = [
 
 export const getTshirtId = (id: string | string[] | undefined) => {
   return tShirts.find((t) => t.id === id)
+}
+
+export const filterTshirts = (category: string) => {
+  const results = tShirts.filter((t) => t.category === category)
+  return results
 }
