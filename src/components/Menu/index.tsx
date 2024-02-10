@@ -38,12 +38,35 @@ export function Menu({ show, selectedMenu }: MenuProps) {
       {
         image: (
           <img
-            src={`https://p325k7wa.twic.pics/high/one-piece/one-piece-odyssey/00-page-setup/OPOD_character_gallery/OPOD_luffy.png?twic=v1/resize=370/step=10/quality=80`}
+            className="w-[250px]"
+            src={`https://icons.iconarchive.com/icons/3xhumed/mega-games-pack-40/512/Starcraft-2-1-icon.png`}
             alt="categoria anime image"
           />
         ),
         href: '/category/anime',
-        name: 'Polos anime',
+        name: 'Polos star craft',
+      },
+      {
+        image: (
+          <img
+            className="w-[250px]"
+            src={`https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/WoW_icon.svg/2048px-WoW_icon.svg.png`}
+            alt="categoria anime image"
+          />
+        ),
+        href: '/category/anime',
+        name: 'Polos wow',
+      },
+      {
+        image: (
+          <img
+            className="w-[250px]"
+            src={`https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Half-Life_lambda_logo.svg/2048px-Half-Life_lambda_logo.svg.png`}
+            alt="categoria anime image"
+          />
+        ),
+        href: '/category/anime',
+        name: 'Polos Half Life',
       },
     ],
     []
@@ -96,7 +119,7 @@ export function Menu({ show, selectedMenu }: MenuProps) {
                   <a href={`${game.href}`}>
                     <Styled.Game>
                       {game.image}
-                      <p>{game.name}</p>
+                      <p className="text-sm">{game.name}</p>
                     </Styled.Game>
                   </a>
                 </Fragment>
@@ -109,7 +132,7 @@ export function Menu({ show, selectedMenu }: MenuProps) {
                 <span key={game.name}>
                   <Styled.Game>
                     {game.image}
-                    <p>{game.name}</p>
+                    <p className="text-sm">{game.name}</p>
                   </Styled.Game>
                 </span>
               ))}

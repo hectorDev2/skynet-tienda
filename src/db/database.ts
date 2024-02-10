@@ -105,8 +105,8 @@ export const tShirts = [
   },
   {
     id: '7',
-    name: 'star_craft',
-    category: 100,
+    name: 'star craft',
+    category: 'star_craft',
     price: 22,
     colors: [
       { id: 1, name: 'blue' },

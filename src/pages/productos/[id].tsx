@@ -1,16 +1,19 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Loading } from '@/components/containers/Loading'
 import { useRouter } from 'next/router'
 import { Header } from '@/components/Header'
 import Head from 'next/head'
 import { GetStaticProps } from 'next'
-import { TShirt } from 'src/types'
 import { Content } from '@/components/productId/Content'
-import { getTshirtId, tShirts } from 'src/db/database'
+import { tShirts } from 'src/db/database'
+import { useStore } from 'src/db/useStore'
 interface HomeProps {
-  tShirt: TShirt
+  productId: string
 }
 
-export default function Home({ tShirt }: HomeProps) {
+export default function Home({ productId }: HomeProps) {
+  const getById = useStore((state: any) => state.getById)
+  const tShirt = getById(productId)
   const router = useRouter()
 
   if (router.isFallback) {
@@ -37,17 +40,15 @@ export default function Home({ tShirt }: HomeProps) {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const productId = params?.id
   try {
-    const data = await getTshirtId(productId)
-
     return {
       props: {
-        tShirt: data,
+        productId,
       },
     }
   } catch (error) {
     return {
       props: {
-        tShirt: [],
+        productId: '1',
       },
     }
   }
