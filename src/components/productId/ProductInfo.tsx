@@ -1,11 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react'
 import { TShirt } from 'src/types'
+const sizes = ['XS', 'S', 'M', 'L', 'XL']
 
 export const ProductInfo = ({ info }: { info: TShirt }) => {
-  console.log(info, 'info')
-
+  const [sizeTarget, setSizeTarget] = useState('M')
   const [count, setCount] = useState(0)
+
+  const handleAddToCart = () => {
+    console.log('add to cart')
+    setCount(count + 1)
+  }
+  const handleRemoveToCart = () => {
+    console.log('remove to cart')
+    if (count === 0) return
+    setCount(count - 1)
+  }
   return (
     <article className="product-description text-white">
       <h3 className="company">skynet Merch</h3>
@@ -18,13 +28,30 @@ export const ProductInfo = ({ info }: { info: TShirt }) => {
         <p className="crossed-out-price">$100.00</p>
       </div>
       {/* <!-- call to action--> */}
+      <div className="flex gap-3">
+        {sizes.map((size) => (
+          <button
+            style={{
+              border: '2px solid white',
+              color: size === sizeTarget ? 'black' : 'white',
+              padding: '5px',
+              width: '50px',
+              background: size === sizeTarget ? 'white' : 'transparent',
+            }}
+            key={size}
+            onClick={() => setSizeTarget(size)}
+          >
+            <span>{size}</span>
+          </button>
+        ))}
+      </div>
       <div className="call-to-action">
         <div className="quantity-button">
-          <button className="minus" onClick={() => setCount(count - 1)}>
+          <button className="minus" onClick={handleRemoveToCart}>
             <img src="/images/icon-minus.svg" alt="min" />
           </button>
           <span className="amount text-black">{count}</span>
-          <button className="plus" onClick={() => setCount(count + 1)}>
+          <button className="plus" onClick={handleAddToCart}>
             <img src="/images/icon-plus.svg" alt="plus" />
           </button>
         </div>
