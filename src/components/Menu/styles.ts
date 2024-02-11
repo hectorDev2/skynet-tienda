@@ -37,7 +37,7 @@ export const Container = styled('div', {
 
 export const GamesContainer = styled('div', {
   display: 'grid',
-  gridTemplateColumns: 'repeat(6, 1fr)',
+  gridTemplateColumns: 'repeat(4, 1fr)',
   gap: '10.3rem',
   margin: '16.8rem auto 0 auto',
   maxWidth: '131.4rem',
@@ -50,7 +50,7 @@ export const GamesContainer = styled('div', {
     selected: {
       games: {},
       varios: {
-        gridTemplateColumns: 'repeat(5, 1fr)',
+        gridTemplateColumns: 'repeat(4, 1fr)',
       },
     },
   },

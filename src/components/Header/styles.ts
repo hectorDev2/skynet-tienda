@@ -1,7 +1,7 @@
 import { styled } from '@/stitches-styled'
 
 export const Container = styled('header', {
-  height: '9.6rem',
+  height: '7.6rem',
   borderBottom: '0.2rem solid',
   borderColor: 'rgba(255, 255, 255, 0.1)',
   position: 'absolute',
@@ -54,12 +54,12 @@ export const Logo = styled('div', {
   },
   '@xl': {
     img: {
-      width: '8.6rem',
+      width: '5.6rem',
     },
   },
   '@sm': {
     img: {
-      width: '7.4rem',
+      width: '5.4rem',
     },
   },
 })

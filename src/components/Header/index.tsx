@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import * as Styled from './styles'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { Nav } from '../Nav'
 import { Menu } from '../Menu'
@@ -69,12 +69,7 @@ export function Header() {
           <Styled.NavContainer>
             <Styled.Logo ref={logoRef}>
               <Link href="/">
-                <Image
-                  width={120}
-                  height={100}
-                  alt="logo skynet"
-                  src="/logo.png"
-                />
+                <img alt="logo skynet" src="/logo.png" />
               </Link>
             </Styled.Logo>
 

@@ -28,7 +28,7 @@ export function Menu({ show, selectedMenu }: MenuProps) {
       {
         image: (
           <img
-            src={`https://p325k7wa.twic.pics/high/one-piece/one-piece-odyssey/00-page-setup/OPOD_character_gallery/OPOD_luffy.png?twic=v1/resize=370/step=10/quality=80`}
+            src={`https://i5.walmartimages.com/seo/Funko-POP-Animation-One-Piece-Crocodile_bdeb50e4-cb02-4493-91db-a7ad9693e076.dc5dc4e0d7f5b5068d74ea32c4deb693.png`}
             alt="categoria anime image"
           />
         ),
@@ -40,10 +40,10 @@ export function Menu({ show, selectedMenu }: MenuProps) {
           <img
             className="w-[250px]"
             src={`https://icons.iconarchive.com/icons/3xhumed/mega-games-pack-40/512/Starcraft-2-1-icon.png`}
-            alt="categoria anime image"
+            alt="categoria star craft image"
           />
         ),
-        href: '/category/anime',
+        href: '/category/start-craft',
         name: 'Polos star craft',
       },
       {
@@ -54,7 +54,7 @@ export function Menu({ show, selectedMenu }: MenuProps) {
             alt="categoria anime image"
           />
         ),
-        href: '/category/anime',
+        href: '/category/wow',
         name: 'Polos wow',
       },
       {
@@ -65,7 +65,7 @@ export function Menu({ show, selectedMenu }: MenuProps) {
             alt="categoria anime image"
           />
         ),
-        href: '/category/anime',
+        href: '/category/half-life',
         name: 'Polos Half Life',
       },
     ],
