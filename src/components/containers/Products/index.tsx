@@ -35,7 +35,7 @@ export function Products() {
             VER MAS
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="icon mx-auto hover:scale-150  icon-tabler icon-tabler-caret-down"
+              className="icon mx-auto hover:scale-150 animate-ping icon-tabler icon-tabler-caret-down"
               width="44"
               height="44"
               viewBox="0 0 24 24"

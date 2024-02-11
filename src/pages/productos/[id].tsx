@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Loading } from '@/components/containers/Loading'
 import { useRouter } from 'next/router'
@@ -7,6 +8,7 @@ import { GetStaticProps } from 'next'
 import { Content } from '@/components/productId/Content'
 import { tShirts } from 'src/db/database'
 import { useStore } from 'src/db/useStore'
+import { Footer } from '@/components/Footer'
 interface HomeProps {
   productId: string
 }
@@ -19,19 +21,24 @@ export default function Home({ productId }: HomeProps) {
   if (router.isFallback) {
     return <div>Cargando...</div>
   }
-  console.log(tShirt)
 
   return (
     <>
       <Head>
-        <title>Skynet M</title>
+        <title>Skynet {tShirt.name}</title>
       </Head>
       <main>
         <Loading />
         <Header />
-        <div className="text-center mt-[100px] md:mt-[200px]">
+        <div className="text-center mt-[100px] md:mt-[200px] mb-[120px]">
           <Content tShirt={tShirt} />
+          <img
+            className="absolute bottom-0 opacity-10 right-0 z-[-1]"
+            src={`/categories/${tShirt.id}.png`}
+            alt={`image ${tShirt.name}`}
+          />
         </div>
+        <Footer />
       </main>
     </>
   )
