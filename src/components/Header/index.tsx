@@ -69,7 +69,11 @@ export function Header() {
           <Styled.NavContainer>
             <Styled.Logo ref={logoRef}>
               <Link href="/">
-                <img alt="logo skynet" src="/logo.png" />
+                <img
+                  className="max-w-[200px]"
+                  alt="logo skynet"
+                  src="/logo.png"
+                />
               </Link>
             </Styled.Logo>
 

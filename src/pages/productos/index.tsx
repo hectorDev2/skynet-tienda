@@ -171,18 +171,18 @@ export default function Products() {
       <Head>
         <title>Skynet M</title>
       </Head>
-      <main className="md:pt-[150px]">
+      <main className="pt-[100px] md:pt-[150px]">
         <div className="px-[10px] md:px-[100px]">
           {products.map(({ image, name, id }) => {
             return (
               <div key={id} className="py-[50px] relative">
                 <img
-                  className="absolute z-[-1] w-[200px] top-[0] filter  opacity-10  right-[-50px]"
+                  className="absolute z-[-1] w-[200px] top-[0] filter  opacity-10 right-[-20px]  md:right-[-50px]"
                   src={`/categories/${id}.png`}
                 />
 
                 <h2 className="text-2xl text-[#04ADFF] uppercase">{name}</h2>
-                <div className="flex  overflow-x-auto gap-2" key={id}>
+                <div className="flex  overflow-x-auto gap-5 md:gap-2" key={id}>
                   <div className="flex gap-4">
                     {image.map((image, i) => (
                       <div
@@ -190,7 +190,7 @@ export default function Products() {
                           background:
                             'linear-gradient(100.71deg, rgb(2, 2, 3) 2.26%, rgba(2, 2, 3, 0) 73.74%);',
                         }}
-                        className=" w-[250px]  md:w-[300px] "
+                        className=" w-[200px]  md:w-[300px] "
                         data-aos="fade-right "
                         key={i}
                       >

@@ -15,7 +15,7 @@ export const ProductGallery = ({ images }: { images: string[] }) => {
         <img
           src={imagePrincipal}
           alt="image product 1"
-          className="main Image w-[362px] h-[362px] "
+          className="magnifiedImg main Image w-[362px] h-[362px] "
         />
         {/* <!--next button --> */}
         <button className="next-btn">

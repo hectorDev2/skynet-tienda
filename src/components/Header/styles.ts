@@ -39,6 +39,7 @@ export const NavContainer = styled('div', {
 
 export const Logo = styled('div', {
   position: 'relative',
+
   '&::before': {
     content: `''`,
     display: 'block',

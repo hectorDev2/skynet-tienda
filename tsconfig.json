@@ -21,6 +21,6 @@
       "@/assets/*": ["./src/assets/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/helpers/magnify.js"],
   "exclude": ["node_modules"]
 }

@@ -5,7 +5,7 @@ export const Container = styled('div', {
   flexDirection: 'column',
   gap: '2rem',
   position: 'absolute',
-  left: '29.8rem',
+  left: '8.8rem',
   top: '24.1rem',
   zIndex: 3,
   '@xl': {
