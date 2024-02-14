@@ -169,20 +169,6 @@ export const GameCard = styled('div', {
       bottom: '3rem',
     },
   },
-
-  '@media(max-width: 845px)': {
-    '.game-image-container': {
-      height: '27rem',
-    },
-  },
-  '@media(max-width: 670px)': {
-    '.game-image-container': {
-      height: '21rem',
-    },
-    p: {
-      display: 'none',
-    },
-  },
 })
 
 export const CardSeeMore = styled('div', {
