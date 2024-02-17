@@ -5,14 +5,14 @@ import { Products } from '@/components/containers/Products'
 import { Hero } from '@/components/containers/Hero'
 import { Loading } from '@/components/containers/Loading'
 import { Header } from '@/components/Header'
-import Head from 'next/head'
 import AOS from 'aos'
+import 'aos/dist/aos.css'
 import { useEffect } from 'react'
 
-import 'aos/dist/aos.css'
 import { Footer } from '@/components/Footer'
+import { Layout } from 'src/layout/Layout'
 
-export default function Home() {
+export default function Home () {
   // const supabase = createServerComponentClient({ cookies })
   // const { data: tshirts } = await supabase.from('tshirts').select('*')
   // console.log(tshirts)
@@ -22,18 +22,13 @@ export default function Home() {
     AOS.refresh()
   }, [])
   return (
-    <>
-      <Head>
-        <title>Skynet M</title>
-      </Head>
-      <main>
-        <Loading />
-        <Header />
-        <Hero />
-        <Products />
-        <Download />
-        <Footer />
-      </main>
-    </>
+    <Layout>
+      <Loading />
+      <Header />
+      <Hero />
+      <Products />
+      <Download />
+      <Footer />
+    </Layout>
   )
 }
